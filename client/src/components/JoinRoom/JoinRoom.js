@@ -9,16 +9,16 @@ const JoinRoom = () => {
 
     return (
         <div className="joinRoomOuterContainer">
-            <div className="joinRoomContainer">
+            <div className="joinRoomInnerContainer">
                 <h1 className="heading">Join Room</h1>
                 <div>
                     <input placeholder="Enter an username" className="joinPageInput" type="text" onChange={(event) => setUsername(event.target.value)} />
                 </div>
                 <div>
-                    <input placeholder="Enter a room name" className="joinPageInput" type="text" onChange={(event) => setRoomName(event.target.value)} />
+                    <input placeholder="Enter a room name" className="joinPageInput mt-20" type="text" onChange={(event) => setRoomName(event.target.value)} />
                 </div>
                 <Link onClick={event => (!username || !roomName) ? event.preventDefault() : null} to={`./chat?username=${username}&roomName=${roomName}`}>
-                    <button className="joinButton" type="submit"> Join Room </button>
+                    <button className="joinButton mt-20" type="submit"> Join Room </button>
                 </Link>
             </div>
         </div>
